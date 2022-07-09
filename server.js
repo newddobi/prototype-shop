@@ -16,6 +16,7 @@ app.get("/test", (req, res) => {
   const ssr = ReactDOMServer.renderToString(
     React.createElement("div", null, "Hello")
   );
+
   const indexHtml = fs
     .readFileSync(path.join(__dirname, "docs", "index.html"))
     .toString()
